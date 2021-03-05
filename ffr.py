@@ -2,25 +2,20 @@ import subprocess as sp
 import re
 import generalTools
 import png
-# import jpg
-# import bmp
-# import .
-# . 
-# .
+import jpg
+import bmp
 
 location=input("Enter file location here : ")
 
 #generalTools
 generalTools.genToolz(location)
-
-#file identification using file command
-def file_identifier():
-    filecmd=sp.run('file {}'.format(location),shell=True,capture_output=True,text=True)
-    return filecmd
-fileType=file_identifier()
-print(fileType)
-pjpg=re.compile(r'jpg',re.IGNORECASE)
-ppng=re.compile(r'png',re.IGNORECASE)
-
-if len(ppng.findall(str(fileType)))!=0:
+#fileType and specific modules
+fileType=generalTools.f_type(location)
+if fileType=="png":
     png.data_from_png(location)
+if fileType=="jpg:
+    jpg.data_from_jpg(location)
+if fileType=="bmp":
+    bmp.data_from_bmp(location)
+if fileType=="zip" :
+    zip.data_from_zip(location)
