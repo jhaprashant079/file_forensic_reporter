@@ -1,0 +1,21 @@
+Linux system with following tools installed:
+    1.exiftool
+    2.xxd
+    3.binwalk
+    4.foremost
+    5.stegsnow
+    6.stegseek
+    7.outguess
+    8.pngcheck
+    9.zsteg
+    10.pdf-parser
+    11.pdfid
+    12.stegolsb
+    13.sox
+    14.rtfobj
+    15.pyxswf
+    16.oletools
+Python3 with following libraries installed:
+    1.hashlib
+    2.Regex
+    3.subprocess
