@@ -5,7 +5,7 @@ R=open("Report.md",'a')
 def data_from_jpg(loc):
     #stegseek
     try:
-        p=sp.Popen(r'stegseek {} /usr/share/wordlist/rockyou.txt'.format(loc),shell=True,text=True,capture_output=True).communicate()[0]
+        p=sp.Popen(r'stegseek {} /usr/share/wordlist/rockyou.txt'.format(loc),shell=True,text=True,stdout=sp.PIPE).communicate()[0]
         if "not find" in p:
             R.write("Stegseek passphrase not found so either the password is not bruteforceable or maybe there is no hidden data.")
         else:
